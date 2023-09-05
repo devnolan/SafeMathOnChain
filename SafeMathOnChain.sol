@@ -56,6 +56,20 @@ library SafeMathOnChain {
     }
 
     /**
+     * @dev Integer division of a number per factor
+     */
+    function divisionOnChain(
+        uint256 a
+    ) internal pure returns (uint256) {
+
+        uint128 factor = 100;
+        unchecked {
+            require(a > 0, "*** divide error");
+            return (a / factor) ;
+        }
+    }
+
+    /**
      * @dev Integer division of two numbers with factor
      */
     function divisionOnChain(
